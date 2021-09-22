@@ -24,21 +24,13 @@ Route::get('/news', function () {
                 "title" => "Bencana Alam Banjir,Longsor, &  Angin Puting Beliung",
                 "slug" => "bencana-alam-banjir-longsor-&-angin-puting-beliung",
                 "time" => "Senin 21 September 2020 Pukul 16.00 Wib",
-                "location" => "Kec. Pamijahan, Kec.Ciawi, Kec Cisarua, Kec.Caringin, Kec.Cijeruk",
-                "kronologi" => "Akibat Hujan Deras dan Angin Lebat Sehingga Menyebabkan Sebagian Wilayah di Kabupaten Bogor Mengalami Banjir, Longsor, dan Angin Kencang"
-    
+                "location" => "Kec. Pamijahan, Kec.Ciawi, Kec Cisarua, Kec.Caringin, Kec.Cijeruk"
             ],
          [
                 "title" => "Bencana Alam Angin Ribut",
                 "slug" => "bencana-alam-angin-ribut",
                 "time" => "28 Maret 2021 Pukul 14.00 WIB",
-                "location" => "Kecamatan Jaten dan Kecamatan Tasikmadu, Kabupaten Karanganyar",
-                "kronologi" => "Pada hari Minggu, 28 Maret 2021 sekitar pukul 14.30 WIB 
-                        terjadi Bencana Alam Angin Ribut di wilayah Kecamatan Jaten dan Kecamatan Tasikmadu, 
-                        Kabupaten Karanganyar. Menurut keterangan saksi a.n Sukardi 72 tahun menuturkan, 
-                        pada saat itu cuaca dalam kondisi hujan dengan intensitas cukup deras disertai angin. 
-                        Dalam kondisi cuaca tersebut mengakibatkan pohon tumbang di beberapa titik jalan raya dan beberapa rumah rusak tertimpa pohon"
-
+                "location" => "Kecamatan Jaten dan Kecamatan Tasikmadu, Kabupaten Karanganyar"
         ],
     ];
     return view('news',[
@@ -47,13 +39,28 @@ Route::get('/news', function () {
     ]);
 });    
 
-Route::get('/login', function () {
+Route::get('/login', function (){
+$login_post = [
+    [
+        "title" => "User",
+        "slug" => "login-user"
+    ],
+    [
+        "title" => "Petugas",
+        "slug" => "login-petugas"
+    ],
+    [
+        "title" => "Admin",
+        "slug" => "login-admin"
+    ],
+];
+
     return view('login',[
         "title" => "Login",
-        "nama" => "Nama",
-        "email" => "Email",
-        "tgl_lahir" => "Tanggal Lahir",
-        "password" => "Password",
-        "id_kecamatan" => "ID Kecamatan"
+        "login" => $login_post
     ]);
+});
+
+Route::get('login/{slug}', function($slug){
+    return view('login');
 });
