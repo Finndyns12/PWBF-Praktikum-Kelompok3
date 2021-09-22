@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('registrasi');
+    return view('registrasi',[
+        "nama" => "Nama",
+        "email" => "Email",
+        "tgl_lahir" => "Tanggal Lahir",
+        "password" => "Password",
+        "id_kecamatan" => "ID Kecamatan"
+    ]);
 });
