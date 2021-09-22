@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">HOME</a>
+          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="/home">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">ABOUT</a>
+          <a class="nav-link {{ ($title === "About" ) ? 'active' : '' }}" href="/about">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news">NEWS</a>
+          <a class="nav-link {{ ($title === "News" ) ? 'active' : '' }}" href="/news">NEWS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/login">LOGIN</a>
+          <a class="nav-link {{ ($title === "Login" ) ? 'active' : '' }}" href="/login">LOGIN</a>
         </li>
       </ul>
     </div>
