@@ -13,27 +13,25 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Pelaporan Bencana</a>
-    <li><img class="image" border="0" src="image/Three-Pilar-Archry-Logo.png"  width="42px" style="margin: 1px;padding: 0px color:white;">Three Pilar Archery</li>
+  <a class="navbar-brand" href="#">
+    <img src="img/pelaporan_bencana.png"/ width="80"> 
+</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Registrasi</a>
+          <a class="nav-link" href="#">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Laporan Bencana</a>
+          <a class="nav-link" href="#">NEWS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="#">LOGIN</a>
         </li>
       </ul>
     </div>
