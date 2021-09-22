@@ -22,16 +22,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          <a class="nav-link active" aria-current="page" href="/home">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT</a>
+          <a class="nav-link" href="/about">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NEWS</a>
+          <a class="nav-link" href="/news">NEWS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LOGIN</a>
+          <a class="nav-link" href="/login">LOGIN</a>
         </li>
       </ul>
     </div>
