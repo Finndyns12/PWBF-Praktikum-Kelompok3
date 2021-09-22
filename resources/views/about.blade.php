@@ -1,10 +1,11 @@
 @extends('layout.main')
 
 @section('container')
-    <v1>Kelompok Sistem Informasi Pelaporan Bencana </v1>
-    <h3>{{ $nama }}</h3>
-    <h3>{{ $email }}</h3>
-    
-    <h3>{{ $nama }}</h3>
-    <h3>{{ $email }}</h3>
+    <h3>Kelompok Sistem Informasi Pelaporan Bencana </h3>
+    <p> ‎      ‎    ‎    </p>
+    <p>{{ $nama }}</p>
+    <p>{{ $email }}</p>
+    <p> ‎      ‎    ‎    </p>
+    <p>{{ $nama }}</p>
+    <p>{{ $email }}</p>
 @endsection

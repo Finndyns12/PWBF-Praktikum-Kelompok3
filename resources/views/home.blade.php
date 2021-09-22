@@ -1,5 +1,5 @@
 @extends('layout.main')
 
 @section ('container')
-<h1>Home Pelaporan Bencana</h1>
+<h3>Home Pelaporan Bencana</h3>
 @endsection

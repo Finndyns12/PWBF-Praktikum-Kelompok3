@@ -18,7 +18,11 @@ Route::get('/home', function () {
     });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about',[
+        "nama" => "Nama",
+        "email" => "Email"
+    ]);
+
     });
 
 Route::get('/news', function () {
