@@ -61,6 +61,12 @@ $login_post = [
     ]);
 });
 
+Route::get('news/{slug}', function($news_post){
+    return view('news2',[
+        "title" => "News"
+    ]);
+});
+
 Route::get('login/{slug}', function($slug){
     return view('login2',[
         "title" => "Login"
