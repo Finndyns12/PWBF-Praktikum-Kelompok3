@@ -18,8 +18,8 @@ return view('home');
 });
 
 
-Route::get('/registrasi', function () {
-    return view('registrasi',[
+Route::get('/login', function () {
+    return view('login',[
         "nama" => "Nama",
         "email" => "Email",
         "tgl_lahir" => "Tanggal Lahir",

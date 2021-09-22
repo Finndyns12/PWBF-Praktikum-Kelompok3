@@ -38,7 +38,7 @@
   </div>
 </nav>
    
-<div class="container">
+<div class="container mt-4">
 <h1>Home Pelaporan Bencana</h1>
 </div>
 
