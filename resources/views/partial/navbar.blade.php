@@ -20,6 +20,9 @@
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Login" ) ? 'active' : '' }}" href="/login">LOGIN</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{ ($title === "Registrasi" ) ? 'active' : '' }}" href="/login">REGISTRASI</a>
+        </li>
       </ul>
     </div>
   </div>
