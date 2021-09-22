@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
+
+});
+
+
+Route::get('/registrasi', function () {
     return view('registrasi',[
         "nama" => "Nama",
         "email" => "Email",
