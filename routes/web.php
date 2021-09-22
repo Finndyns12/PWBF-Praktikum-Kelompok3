@@ -22,6 +22,7 @@ Route::get('/news', function () {
         $news_post = [
         [
                 "title" => "Bencana Alam Banjir,Longsor, &  Angin Puting Beliung",
+                "slug" => "bencana-alam-banjir-longsor-&-angin-puting-beliung",
                 "time" => "Senin 21 September 2020 Pukul 16.00 Wib",
                 "location" => "Kec. Pamijahan, Kec.Ciawi, Kec Cisarua, Kec.Caringin, Kec.Cijeruk",
                 "kronologi" => "Akibat Hujan Deras dan Angin Lebat Sehingga Menyebabkan Sebagian Wilayah di Kabupaten Bogor Mengalami Banjir, Longsor, dan Angin Kencang"
@@ -29,6 +30,7 @@ Route::get('/news', function () {
             ],
          [
                 "title" => "Bencana Alam Angin Ribut",
+                "slug" => "bencana-alam-angin-ribut",
                 "time" => "28 Maret 2021 Pukul 14.00 WIB",
                 "location" => "Kecamatan Jaten dan Kecamatan Tasikmadu, Kabupaten Karanganyar",
                 "kronologi" => "Pada hari Minggu, 28 Maret 2021 sekitar pukul 14.30 WIB 
