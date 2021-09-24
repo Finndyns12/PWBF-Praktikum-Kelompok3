@@ -72,3 +72,14 @@ Route::get('login/{slug}', function($slug){
         "title" => "Login"
     ]);
 });
+
+
+Route::get('/registrasi', function (){
+        return view('Registrasi',[
+            "title" => "Registrasi",
+            "id_kecamatan" => "ID Kecamatan",
+            "password" => "Password",
+            "email" => "Email",
+            "tgl_lahir" => "Tanggal Lahir"
+        ]);
+    });

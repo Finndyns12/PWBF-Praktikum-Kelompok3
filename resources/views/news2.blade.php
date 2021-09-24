@@ -7,4 +7,6 @@
     <h4>Kec. Pamijahan, Kec.Ciawi, Kec Cisarua, Kec.Caringin, Kec.Cijeruk</h4>
     <h4>Akibat Hujan Deras dan Angin Lebat Sehingga Menyebabkan Sebagian Wilayah di Kabupaten Bogor Mengalami Banjir, Longsor, dan Angin Kencang</h4>
     </article>
+
+    <a href= "/news">Back to News</a>
 @endsection

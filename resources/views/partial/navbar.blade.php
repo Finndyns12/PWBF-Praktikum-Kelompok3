@@ -1,8 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/home">
-    <img src="img/pelaporan_bencana.png" href="/home" width="150"> 
-    </a>
+    <a class="navbar-brand" href="#">|Pelaporan Bencana|</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,7 +19,7 @@
           <a class="nav-link {{ ($title === "Login" ) ? 'active' : '' }}" href="/login">LOGIN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Registrasi" ) ? 'active' : '' }}" href="/login">REGISTRASI</a>
+          <a class="nav-link {{ ($title === "Registrasi" ) ? 'active' : '' }}" href="/registrasi">REGISTRASI</a>
         </li>
       </ul>
     </div>
