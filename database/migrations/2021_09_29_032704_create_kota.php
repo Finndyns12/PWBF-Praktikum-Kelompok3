@@ -14,8 +14,7 @@ class CreateKota extends Migration
     public function up()
     {
         Schema::create('kota', function (Blueprint $table) {
-            $table->id_kota();
-            $table->id_provinsi();
+            $table->id();
             $table->string('nama_kota',20);
             $table->timestamps();
         });

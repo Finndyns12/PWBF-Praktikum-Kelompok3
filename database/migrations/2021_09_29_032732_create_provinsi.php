@@ -14,7 +14,7 @@ class CreateProvinsi extends Migration
     public function up()
     {
         Schema::create('provinsi', function (Blueprint $table) {
-            $table->id_provinsi();
+            $table->id();
             $table->string('nama_provinsi',25);
             $table->timestamps();
         });
