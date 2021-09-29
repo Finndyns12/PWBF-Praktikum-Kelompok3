@@ -1,11 +1,12 @@
 @extends('layout.main')
 
 @section('container')
-    <h3>Kelompok Sistem Informasi Pelaporan Bencana </h3>
-    <p> ‎      ‎    ‎    </p>
-    <p>{{ $nama }}</p>
-    <p>{{ $email }}</p>
-    <p> ‎      ‎    ‎    </p>
-    <p>{{ $nama }}</p>
-    <p>{{ $email }}</p>
+   
+    @foreach ($about as $about)
+        <article class= "mb-5">
+            <h5>Nama: {{ $about["nama"] }}</h5>
+            <h5>NIM: {{ $about["nim"] }}</h5>
+        </article>
+    @endforeach
+
 @endsection
