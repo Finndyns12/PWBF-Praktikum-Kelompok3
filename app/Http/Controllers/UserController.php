@@ -13,8 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-            $user=userr::all();
-        return view('user.index',['userr'=>$user]);
+              $user=userr::all();
+ return view('userr.index',['user'=>$user]);
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class KotaController extends Controller
+class KatBencanaCont extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class KotaController extends Controller
      */
     public function index()
     {
-        $kota=kotaa::all();
- return view('kotaa.index',['kota'=>$kota]);
+          $katbencana=ktb::all();
+ return view('ktb.index',['katbencana'=>$katbencana]);
     }
 
     /**
