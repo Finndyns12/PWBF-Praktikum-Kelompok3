@@ -13,7 +13,8 @@ class KotaController extends Controller
      */
     public function index()
     {
-        
+        $kota=kotaa::all();
+        return view('kota.index',['kotaa'=>$kotaa]);
     }
 
     /**
