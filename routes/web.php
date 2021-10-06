@@ -4,17 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', function () {
     return view('home',[
-        "title" => "Home"
+        "title" => "Home",
+        "lapor" => "Pelaporan Bencana",
+        "history" => "History Laporan"
     ]);
-});
-
-Route::get('/about', function () {
-    return view('about',[
-        "title" => "About",
-        "nama" => "Nama",
-        "email" => "Email"
-    ]);
-
 });
 
 Route::get('/news', function () {
@@ -83,3 +76,24 @@ Route::get('/registrasi', function (){
             "tgl_lahir" => "Tanggal Lahir"
         ]);
     });
+
+
+    Route::get('/about', function () {
+        $about_post = [
+            [
+            "title" => "About",
+            "nama" => "Finndy",
+            "nim" => "152011513011"
+            ],
+            [
+            "title" => "About",
+            "nama" => "Novira",
+            "nim" => "152011513003"
+            ],
+        ];
+        return view('about',[
+            "title" => "About",
+            "about" => $about_post
+        ]);
+    });
+

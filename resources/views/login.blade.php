@@ -4,9 +4,9 @@
 
     @foreach ($login as $login)
         <article class= "mb-5">
-            <h3>
+            <h5>
                 <a href="/login/{{ $login["slug"] }}">{{ $login["title"]  }}</a>
-            </h3>
+            </h5>
         </article>
     @endforeach    
 
