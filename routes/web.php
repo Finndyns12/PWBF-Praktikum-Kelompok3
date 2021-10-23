@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\NewsController;
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/home', function () {
     return view('home',[
@@ -10,29 +13,8 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/news', function () {
-    
-    $news_post = [
-    [
-            "title" => "Bencana Alam Banjir,Longsor, &  Angin Puting Beliung",
-            "slug" => "bencana-alam-banjir-longsor-&-angin-puting-beliung",
-            "time" => "Senin 21 September 2020 Pukul 16.00 Wib",
-            "location" => "Kec. Pamijahan, Kec.Ciawi, Kec Cisarua, Kec.Caringin, Kec.Cijeruk"
-        ],
-     [
-            "title" => "Bencana Alam Angin Ribut",
-            "slug" => "bencana-alam-angin-ribut",
-            "time" => "28 Maret 2021 Pukul 14.00 WIB",
-            "location" => "Kecamatan Jaten dan Kecamatan Tasikmadu, Kabupaten Karanganyar"
-    ],
-];
-return view('news',[
-    "title" => "News",
-    "news" => $news_post
-]);
-});    
-
-    
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('news/{slug}' , [NewsController::class, 'show'] );
 
 Route::get('/login', function (){
 $login_post = [
@@ -56,13 +38,8 @@ $login_post = [
     ]);
 });
 
-Route::get('news/{slug}', function($news_post){
-    return view('news2',[
-        "title" => "News"
-    ]);
-});
 
-Route::get('login/{slug}', function($slug){
+Route::get('login/{slug}', function($slug_login){
     return view('login2',[
         "title" => "Login"
     ]);
