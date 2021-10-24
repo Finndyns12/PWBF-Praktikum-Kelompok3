@@ -19,8 +19,7 @@ Route::get('/home', function () {
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{news}' , [NewsController::class, 'show'] );
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/login/{slug}', [LoginController::class, 'show'] );
+
 
     Route::get('/about', function () {
         $about_post = [
