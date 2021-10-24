@@ -14,11 +14,12 @@ class CreateKategoriBencana extends Migration
     public function up()
     {
         Schema::create('kategori_bencana', function (Blueprint $table) {
-            $table->id('id_kb');
-            $table->string('kategori_bencana',30);
+            $table->id();
+            $table->string('kategori_bencana',50);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

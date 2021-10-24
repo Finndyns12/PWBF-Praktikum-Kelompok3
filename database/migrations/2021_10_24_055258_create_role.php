@@ -15,14 +15,7 @@ class CreateRole extends Migration
     {
         Schema::create('role', function (Blueprint $table) {
             $table->id();
-<<<<<<< HEAD:database/migrations/2021_10_24_055258_create_role.php
-            $table->string('role',50);
-=======
-            $table->string('NIK')->unique();
-            $table->string('Nama');
-            $table->string('umur');
-            $table->string('kondisi');
->>>>>>> 96c294b1d62dd033bd0b477699a109ed9cb2eae6:database/migrations/2021_10_06_044001_create_tabel_detail_korban.php
+            $table->string('nama_role');
             $table->timestamps();
         });
     }
