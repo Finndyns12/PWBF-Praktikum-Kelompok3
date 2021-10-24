@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBencana extends Migration
+class CreateTabelRole extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateBencana extends Migration
      */
     public function up()
     {
-        Schema::create('bencana', function (Blueprint $table) {
+        Schema::create('tabel_role', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_bencana',30);
+            $table->string('role');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateBencana extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bencana');
+        Schema::dropIfExists('tabel_role');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKota extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateKota extends Migration
      */
     public function up()
     {
-        Schema::create('kota', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kota',20);
+            $table->string('title');
+            $table->string('excerpt');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -27,6 +29,7 @@ class CreateKota extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kota');
+        Schema::dropIfExists('news');
     }
 }
+ 

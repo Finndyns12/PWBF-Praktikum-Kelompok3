@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKategoriBencana extends Migration
+class CreateTabelProvinsi extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateKategoriBencana extends Migration
      */
     public function up()
     {
-        Schema::create('kategori_bencana', function (Blueprint $table) {
+        Schema::create('tabel_provinsi', function (Blueprint $table) {
+
             $table->id();
-            $table->string('kategori_bencana',25);
+            $table->string('nama_provinsi');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateKategoriBencana extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_bencana');
+        Schema::dropIfExists('tabel_provinsi');
     }
 }
