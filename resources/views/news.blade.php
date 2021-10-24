@@ -1,14 +1,14 @@
-@extends('layout.main')
+@extends('layout/main')
 
 @section('container')
-   
+   <h1 class="mb-5">Halaman News</h1>
+
     @foreach ($news as $news)
-        <article class= "mb-5">
-            <h3>
+        <article>
+            <h5>
                 {{ $news["title"] }}
-            </h3>
-            <h5>Waktu: {{ $news["time"] }}</h5>
-            <h5>Lokasi: {{ $news["location"] }}</h5>
+            </h5>
+            <p>{{ $news["body"] }}</p>
         </article>
     @endforeach
 

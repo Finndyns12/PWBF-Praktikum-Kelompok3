@@ -14,7 +14,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/news', [NewsController::class, 'index']);
-Route::get('news/{slug}' , [NewsController::class, 'show'] );
+Route::get('/news/{slug}' , [NewsController::class, 'show'] );
 
 Route::get('/login', function (){
 $login_post = [
