@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\bencana;
 use Illuminate\Http\Request;
 
 class BencanaController extends Controller
@@ -13,8 +14,8 @@ class BencanaController extends Controller
      */
     public function index()
     {
-          $bencana=bcn::all();
- return view('bcn.index',['bencana'=>$bencana]);
+        $p = bencana::all();
+        return view('bencana',['p'=>$p],["title" => "bencana"]);
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\provinsi;
 
 class ProvinsiController extends Controller
 {
@@ -13,8 +14,9 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-              $provinsi=prov::all();
- return view('prov.index',['provinsi'=>$provinsi]);
+             $p = provinsi::all();
+             return view('provinsi',['p'=>$p],["title" => "Provinsi"]);
+             
     }
 
     /**

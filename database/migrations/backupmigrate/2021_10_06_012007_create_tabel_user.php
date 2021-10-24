@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelDetailKorban extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateTabelDetailKorban extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_detail_korban', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('NIK')->unique();
-            $table->string('Nama');
-            $table->string('umur');
-            $table->string('kondisi');
+            $table->string('title');
+            $table->string('excerpt');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -30,6 +29,7 @@ class CreateTabelDetailKorban extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_detail_korban');
+        Schema::dropIfExists('news');
     }
 }
+ 

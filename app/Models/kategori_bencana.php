@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class kategori_bencana extends Model
 {
-    use HasFactory;
+    protected $table='kategori_bencana';
 }

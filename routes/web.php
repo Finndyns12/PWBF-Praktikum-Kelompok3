@@ -41,3 +41,11 @@ Route::get('/login/{slug}', [LoginController::class, 'show'] );
         ]);
     });
 
+Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');
+Route::get ('/kategori','App\Http\Controllers\KatBencanaCont@index');
+Route::get ('/role','App\Http\Controllers\RoleController@index');
+Route::get ('/kota','App\Http\Controllers\KotaController@index');
+Route::get ('/kec','App\Http\Controllers\KecamatanController@index');
+Route::get ('/bencana','App\Http\Controllers\BencanaController@index');
+Route::get ('/user','App\Http\Controllers\UserController@index');
+

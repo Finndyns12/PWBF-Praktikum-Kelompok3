@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\role;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -13,7 +14,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $p = role::all();
+        return view('role',['p'=>$p],["title" => "role"]);
     }
 
     /**
@@ -34,8 +36,7 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-              $role=rl::all();
- return view('rl.index',['role'=>$role]);
+   
     }
 
     /**

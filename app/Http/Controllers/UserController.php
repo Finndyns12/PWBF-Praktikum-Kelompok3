@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\userr;
 use Illuminate\Http\Request;
-
 class UserController extends Controller
 {
     /**
@@ -13,8 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
-              $user=userr::all();
- return view('userr.index',['user'=>$user]);
+        $p = userr::all();
+        return view('user',['p'=>$p],["title" => "user"]);
+    
     }
 
     /**

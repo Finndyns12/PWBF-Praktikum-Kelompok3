@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelUserRole extends Migration
+class CreateProvinsi extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateTabelUserRole extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_user_role', function (Blueprint $table) {
-            $table->id();
+        Schema::create('provinsi', function (Blueprint $table) {
+            $table->id('id_prov');
+            $table->string('nama_provinsi',100);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateTabelUserRole extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_UserRole');
+        Schema::dropIfExists('provinsi');
     }
 }
