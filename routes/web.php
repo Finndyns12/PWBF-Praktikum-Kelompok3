@@ -17,7 +17,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{id}' , [NewsController::class, 'show'] );
+Route::get('/news/{news}' , [NewsController::class, 'show'] );
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/login/{slug}', [LoginController::class, 'show'] );
