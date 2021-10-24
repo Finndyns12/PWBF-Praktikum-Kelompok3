@@ -15,6 +15,8 @@ class CreateTabelPelaporan extends Migration
     {
         Schema::create('tabel_pelaporan', function (Blueprint $table) {
             $table->id();
+            $table->string('waktu bencana');
+            $table->string('status');
             $table->timestamps();
         });
     }

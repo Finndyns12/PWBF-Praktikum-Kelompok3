@@ -19,9 +19,12 @@
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Login" ) ? 'active' : '' }}" href="{{ url('/login')}}">LOGIN</a>
         </li>
+<<<<<<< HEAD
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Registrasi" ) ? 'active' : '' }}"  href="{{ url('/registrasi')}}">REGISTRASI</a>
         </li>
+=======
+>>>>>>> 96c294b1d62dd033bd0b477699a109ed9cb2eae6
       </ul>
     </div>
   </div>
