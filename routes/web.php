@@ -5,6 +5,7 @@ use App\Models\Login;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 
 
@@ -39,6 +40,11 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
             "about" => $about_post
         ]);
     });
+
+    Route::get('/login',[LoginController::class,'index']);
+
+    Route::get('/register',[RegisterController::class,'index']);
+    Route::post('/register',[RegisterController::class,'store']);
 
 Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');
 Route::get ('/kategori','App\Http\Controllers\KatBencanaCont@index');
