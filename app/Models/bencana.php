@@ -9,8 +9,4 @@ class bencana extends Model
 {
     protected $table = 'bencana';
 
-    public function bencana()
-    {
-        return $this->hasMany(bencana::class,'id_bencana','id');
-    }
 }

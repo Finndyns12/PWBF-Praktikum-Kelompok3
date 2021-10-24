@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kategori_bencana;
 use Illuminate\Http\Request;
 
 class KatBencanaCont extends Controller
@@ -13,8 +14,8 @@ class KatBencanaCont extends Controller
      */
     public function index()
     {
-          $katbencana=ktb::all();
- return view('ktb.index',['katbencana'=>$katbencana]);
+        $p = kategori_bencana::all();
+        return view('kategoribencana',['p'=>$p],["title" => "kategoribencana"]);
     }
 
     /**

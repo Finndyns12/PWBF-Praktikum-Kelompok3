@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kecamatan;
 use Illuminate\Http\Request;
 
 class KecamatanController extends Controller
@@ -13,8 +14,8 @@ class KecamatanController extends Controller
      */
     public function index()
     {
-          $kecamatan=kec::all();
- return view('kec.index',['kecamatan'=>$kecamatan]);
+        $p = kecamatan::all();
+        return view('kecamatan',['p'=>$p],["title" => "kecamatan"]);
     }
 
     /**

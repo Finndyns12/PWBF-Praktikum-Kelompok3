@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kota;
 use Illuminate\Http\Request;
 
 class KotaController extends Controller
@@ -13,8 +14,8 @@ class KotaController extends Controller
      */
     public function index()
     {
-        $kota=kotaa::all();
- return view('kotaa.index',['kota'=>$kota]);
+        $p = kota::all();
+        return view('kota',['p'=>$p],["title" => "kota"]);
     }
 
     /**
