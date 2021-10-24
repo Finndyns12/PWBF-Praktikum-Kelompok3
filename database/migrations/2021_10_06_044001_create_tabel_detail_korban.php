@@ -15,7 +15,7 @@ class CreateTabelDetailKorban extends Migration
     {
         Schema::create('tabel_detail_korban', function (Blueprint $table) {
             $table->id();
-            $table->string('NIK');
+            $table->string('NIK')->unique();
             $table->string('Nama');
             $table->string('umur');
             $table->string('kondisi');

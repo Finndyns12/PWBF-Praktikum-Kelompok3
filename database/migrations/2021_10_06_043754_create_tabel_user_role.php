@@ -15,7 +15,6 @@ class CreateTabelUserRole extends Migration
     {
         Schema::create('tabel_user_role', function (Blueprint $table) {
             $table->id();
-
             $table->timestamps();
         });
     }
