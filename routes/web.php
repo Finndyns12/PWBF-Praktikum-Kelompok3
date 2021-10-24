@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\NewsController;
 use App\Models\News;
+use App\Models\Login;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\LoginController;
+
 
 
 Route::get('/home', function () {
@@ -14,48 +17,10 @@ Route::get('/home', function () {
 });
 
 Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{slug}' , [NewsController::class, 'show'] );
+Route::get('/news/{id}' , [NewsController::class, 'show'] );
 
-Route::get('/login', function (){
-$login_post = [
-    [
-        "title" => "User",
-        "slug" => "login-user"
-    ],
-    [
-        "title" => "Petugas",
-        "slug" => "login-petugas"
-    ],
-    [
-        "title" => "Admin",
-        "slug" => "login-admin"
-    ],
-];
-
-    return view('login',[
-        "title" => "Login",
-        "login" => $login_post
-    ]);
-});
-
-
-Route::get('login/{slug}', function($slug_login){
-    return view('login2',[
-        "title" => "Login"
-    ]);
-});
-
-
-Route::get('/registrasi', function (){
-        return view('Registrasi',[
-            "title" => "Registrasi",
-            "id_kecamatan" => "ID Kecamatan",
-            "password" => "Password",
-            "email" => "Email",
-            "tgl_lahir" => "Tanggal Lahir"
-        ]);
-    });
-
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login/{slug}', [LoginController::class, 'show'] );
 
     Route::get('/about', function () {
         $about_post = [

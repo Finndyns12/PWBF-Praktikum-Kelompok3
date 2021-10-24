@@ -9,17 +9,17 @@ class NewsController extends Controller
 {
     public function index()
     {
-        return view('news', [
+        return view('newss', [
             "title" => "News",
-            "news" => News::all()
+            "newss" => News::all()
         ]);
     }
 
-    public function show($slug)
+    public function show($id)
     {
         return view('news',[
             "title" => "News",
-            "news" => News::find($slug)
+            "newss" => News::find($id)
         ]);
     }
 }
