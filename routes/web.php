@@ -47,7 +47,7 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
     Route::get('/register',[RegisterController::class,'index']);
     Route::post('/register',[RegisterController::class,'store']);
 
-    Route::get('/dashboard',[DashboardController::class,'index']);
+   
 
 Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');
 Route::get ('/kategori','App\Http\Controllers\KatBencanaCont@index');
