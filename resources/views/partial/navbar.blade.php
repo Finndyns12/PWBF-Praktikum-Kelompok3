@@ -7,18 +7,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{ ($active === "Home" ) ? 'active' : '' }}" href="{{ url('/home')}}">HOME</a>
+          <a class="nav-link {{ ($title === "Home" ) ? 'active' : '' }}" href="{{ url('/home')}}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($active === "About" ) ? 'active' : '' }}" href="{{ url('/about')}}">ABOUT</a>
+          <a class="nav-link {{ ($title === "About" ) ? 'active' : '' }}" href="{{ url('/about')}}">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($active === "News" ) ? 'active' : '' }}"  href="{{ url('/news')}}">NEWS</a>
+          <a class="nav-link {{ ($title === "News" ) ? 'active' : '' }}"  href="{{ url('/news')}}">NEWS</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a href="/login" class="nav-link {{ ($active === "Login" ) ? 'active' : '' }}">
+          <a href="/login" class="nav-link {{ ($title === "Login" ) ? 'active' : '' }}">
           <i class="bi bi-box-arrow-in-right"></i>Login</a>
         </li>
       </ul>

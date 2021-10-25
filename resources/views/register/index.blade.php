@@ -8,24 +8,50 @@
           <form action="/register" method="post">
           @csrf
             <div class="form-floating">
-              <input type="text" name="name" class="form-control rounded-top" id="name" placeholder="Name">
+              <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" 
+              placeholder="Name" required value="{{old('nama')}}">
               <label for="name">Name</label>
+              @error('name')
+                <div class="invalid-feedback">
+                 {{ $message }}
+                </div>
+              @enderror
             </div>
             <div class="form-floating">
-              <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+              <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{old('email')}}">
               <label for="email">Email address</label>
+              @error('email')
+                <div class="invalid-feedback">
+                 {{ $message }}
+                </div>
+              @enderror
             </div>
             <div class="form-floating">
-              <input type="date" name="Tanggal Lahir" class="form-control" id="tgl_lahir" placeholder="25/10/2021">
+              <input type="date" name="tgl_lahir" class="form-control @error('tgl_lahir') is-invalid @enderror" id="tgl_lahir" placeholder="25/10/2021" required value="{{old('tgl_lahir')}}">
               <label for="tgl_lahir">Tanggal Lahir</label>
+              @error('tgl_lahir')
+                <div class="invalid-feedback">
+                 {{ $message }}
+                </div>
+              @enderror
             </div>
             <div class="form-floating">
-              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
               <label for="password">Password</label>
+              @error('password')
+                <div class="invalid-feedback">
+                 {{ $message }}
+                </div>
+              @enderror
             </div>
             <div class="form-floating">
-              <input type="id" name="id kecamatan" class="form-control rounded-bottom" id="id_kecamatan" placeholder="1">
+              <input type="string" name="id_kecamatan" class="form-control @error('id_kecamatan') is-invalid @enderror" id="id_kecamatan" placeholder="12345" required value="{{old('id_kecamatan')}}">
               <label for="id_kecamatan">ID Kecamatan</label>
+              @error('id_kecamatan')
+                <div class="invalid-feedback">
+                 {{ $message }}
+                </div>
+              @enderror
             </div>
             <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
             </form>
