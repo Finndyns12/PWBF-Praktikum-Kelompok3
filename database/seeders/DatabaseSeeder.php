@@ -18,15 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         //\App\Models\User::factory(10)->create();
 
-        User::create([
-                'name' => 'Sari',
-                'email' => 'sari@gmail.com',
-                'password' => bcrypt('12345'),
-                'tgl_lahir' => '12/11/2001',
-                'id_kecamatan' => '1212'
-        ]);
-
-
         News::create([
                 'title'=>'LAPORAN KEJADIAN BENCANA ALAM 21 SEPTEMBER 2020',
                 'excerpt' => 'Banjir,Longsor, &  Angin Puting Beliung',
