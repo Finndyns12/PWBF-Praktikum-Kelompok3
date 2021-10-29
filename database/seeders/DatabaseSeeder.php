@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use \App\Models\User;
 use \App\Models\kota;
 use App\Models\News;
 use \App\Models\provinsi;
@@ -36,6 +35,10 @@ class DatabaseSeeder extends Seeder
                  KRONOLOGI KEJADIAN
                 - Akibat Hujan Deras dan Angin Lebat Sehingga Menyebabkan Sebagian Wilayah di Kabupaten Bogor Mengalami Banjir, Longsor, dan Angin Kencang.
                 '
+        ]);
+
+        provinsi::create([
+                'nama_provinsi'=>'Jawa Timur'
         ]);
     }
 }
