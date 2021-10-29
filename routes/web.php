@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use App\Models\News;
 use App\Models\Login;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardTabelPelaporanController;
 
 
 
@@ -51,7 +51,9 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
 
     Route::get('/dashboard',function(){
         return view('dashboard.index');
-    })->middleware('auth');
+        })->middleware('auth');
+    
+    Route::resource('/dashboard/lapor', DashboardTabelPelaporanController::class)->middleware('auth');
 
    
 

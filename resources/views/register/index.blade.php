@@ -27,8 +27,7 @@
               @enderror
             </div>
             <div class="form-floating">
-              <input type="date" name="tgl_lahir" class="form-control @error('tgl_lahir') is-invalid @enderror" id="tgl_lahir" placeholder="25/10/2021" required value="{{old('tgl_lahir')}}">
-              <label for="tgl_lahir">Tanggal Lahir</label>
+              <input type="date" name="tgl_lahir" class="form-control @error('tgl_lahir') is-invalid @enderror" id="tgl_lahir" placeholder="25/10/2021" required value="{{old('tgl_lahir')}}"><label for="tgl_lahir">Tanggal Lahir</label>
               @error('tgl_lahir')
                 <div class="invalid-feedback">
                  {{ $message }}
