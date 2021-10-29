@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts\main')
 
 @section('container')
    <h2 class="mb-5">Halaman News</h2>
