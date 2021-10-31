@@ -51,9 +51,9 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
 
     Route::get('/dashboard',function(){
         return view('dashboard.index');
-        })->middleware('auth');
+        });
     
-    Route::resource('/dashboard/lapor', DashboardTabelPelaporanController::class)->middleware('auth');
+    Route::resource('/dashboard/lapor', DashboardTabelPelaporanController::class);
 
    
 

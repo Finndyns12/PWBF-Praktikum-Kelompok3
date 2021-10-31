@@ -36,9 +36,5 @@ class DatabaseSeeder extends Seeder
                 - Akibat Hujan Deras dan Angin Lebat Sehingga Menyebabkan Sebagian Wilayah di Kabupaten Bogor Mengalami Banjir, Longsor, dan Angin Kencang.
                 '
         ]);
-
-        provinsi::create([
-                'nama_provinsi'=>'Jawa Timur'
-        ]);
     }
 }
