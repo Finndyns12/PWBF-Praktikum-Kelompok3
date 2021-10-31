@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class provinsi extends Model
+class DetailKorban extends Model
 {
-    use HasFactory;
     protected $guarded = ['id'];
-
-    public function kota()
+    public function pelaporan()
     {
-        return $this->hasMany(Kota::class);
+    return $this->belongsTo(Pelaporan::class);
     }
-
 }

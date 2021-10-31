@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeProvinsiToProvinsisTable extends Migration
+class UserRole extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class ChangeProvinsiToProvinsisTable extends Migration
      */
     public function up()
     {
-        Schema::rename('provinsi', 'provinsis');
+        Schema::create('user_role', function (Blueprint $table) {
+            $table->id('id_user_role');
+            $table->foreignId('id_user');
+            $table->foreignId('id_role');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,8 +28,6 @@ class ChangeProvinsiToProvinsisTable extends Migration
      */
     public function down()
     {
-        Schema::table('provinsis', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('user_role');
     }
 }

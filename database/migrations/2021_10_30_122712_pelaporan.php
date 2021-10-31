@@ -4,11 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-
-
-class CreateTabelUserRole extends Migration
-
+class Pelaporan extends Migration
 {
     /**
      * Run the migrations.
@@ -17,10 +13,13 @@ class CreateTabelUserRole extends Migration
      */
     public function up()
     {
-
-
-        Schema::create('tabel_user_role', function (Blueprint $table) {
-            $table->id();
+        Schema::create('pelaporan', function (Blueprint $table) {
+            $table->id('id_laporan');
+            $table->foreignId('id_user');
+            $table->foreignId('id_kecamatan');
+            $table->foreignId('id_bencana');
+            $table->string('waktu_bencana');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -32,9 +31,6 @@ class CreateTabelUserRole extends Migration
      */
     public function down()
     {
-
-       
-        Schema::dropIfExists('tabel_user_role');
-
+        Schema::dropIfExists('pelaporan');
     }
 }

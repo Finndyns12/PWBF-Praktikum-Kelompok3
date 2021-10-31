@@ -22,5 +22,13 @@ class User extends Authenticatable
 
         protected $guarded = ['id'];
 
+        public function UserRole()
+        {
+            return $this->belongsTo(UserRole::class);
+        }
+        public function pelaporan()
+        {
+        return $this->hasMany(Pelaporan::class);
+        }
    
 }

@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class kategori_bencana extends Model
 {
-    protected $table='kategori_bencana';
+    protected $guarded = ['id'];
+
+    public function bencana()
+    {
+        return $this->hasMany(Bencana::class);
+    }
 }
