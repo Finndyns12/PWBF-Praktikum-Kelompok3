@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class kota extends Model
+class Kota extends Model
 {
     use HasFactory;
-
     protected $guarded = ['id'];
 
     public function provinsi()
@@ -19,5 +18,4 @@ class kota extends Model
     {
         return $this->hasMany(Kecamatan::class);
     }
-
 }

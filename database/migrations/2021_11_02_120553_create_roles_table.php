@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Kecamatan extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Kecamatan extends Migration
      */
     public function up()
     {
-        Schema::create('kecamatan', function (Blueprint $table) {
-            $table->id('id_kecamatan');
-            $table->foreignId('id_kota');
-            $table->string('nama_kecamatan');
+        Schema::create('roles', function (Blueprint $table) {
+            $table->id('id_role');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class Kecamatan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kecamatan');
+        Schema::dropIfExists('roles');
     }
 }

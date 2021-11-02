@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class bencana extends Model
+class Bencana extends Model
 {
+    use HasFactory;
     protected $guarded = ['id'];
 
-    public function KategoriBencana()
+    public function categories()
     {
-        return $this->belongsTo(KategoriBencana::class);
+        return $this->belongsTo(Categories::class);
     }
     public function pelaporan()
     {
         return $this->belongsTo(Pelaporan::class);
     }
-
 }

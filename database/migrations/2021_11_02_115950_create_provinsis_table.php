@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Kota extends Migration
+class CreateProvinsisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Kota extends Migration
      */
     public function up()
     {
-        Schema::create('kota', function (Blueprint $table) {
-            $table->id('id_kota');
-            $table->foreignId('id_prov');
-            $table->string('nama_kota');
+        Schema::create('provinsis', function (Blueprint $table) {
+            $table->id('id_prov');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class Kota extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kota');
+        Schema::dropIfExists('provinsis');
     }
 }

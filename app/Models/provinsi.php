@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class provinsi extends Model
+class Provinsi extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
@@ -13,6 +13,5 @@ class provinsi extends Model
     public function kota()
     {
         return $this->hasMany(Kota::class);
-    }
-
+    }use HasFactory;
 }

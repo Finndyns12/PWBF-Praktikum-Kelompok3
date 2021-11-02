@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pelaporan extends Model
 {
+    use HasFactory;
     protected $guarded = ['id'];
 
     public function user()

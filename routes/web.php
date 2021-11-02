@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardTabelPelaporanController;
+use App\Http\Controllers\DashboardPelaporanController;
+use App\Http\Controllers\DashboardHistoryController;
+use App\Http\Controllers\DashboardDaftarBencanaController;
 
 
 
@@ -52,8 +54,10 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
     Route::get('/dashboard',function(){
         return view('dashboard.index');
         });
-    
-    Route::resource('/dashboard/lapor', DashboardTabelPelaporanController::class);
+
+    Route::resource('/dashboard/lapor', DashboardPelaporanController::class);
+    Route::resource('/dashboard/history', DashboardHistoryController::class);
+    Route::resource('/dashboard/daftarbencana', DashboardDaftarBencanaController::class);
 
    
 

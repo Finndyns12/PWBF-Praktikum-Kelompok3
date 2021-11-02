@@ -14,7 +14,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/histori') ? 'active' : '' }}" href="/dashboard/histori">
+            <a class="nav-link {{ Request::is('dashboard/history') ? 'active' : '' }}" href="/dashboard/history">
               <span data-feather="clock"></span>
               Histori Pelaporan
             </a>

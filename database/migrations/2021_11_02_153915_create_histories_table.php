@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Pelaporan extends Migration
+class CreateHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class Pelaporan extends Migration
      */
     public function up()
     {
-        Schema::create('pelaporan', function (Blueprint $table) {
-            $table->id('id_laporan');
-            $table->foreignId('id_user');
-            $table->foreignId('id_kecamatan');
-            $table->foreignId('id_bencana');
-            $table->string('waktu_bencana');
+        Schema::create('histories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('category');
+            $table->string('bencana');
+            $table->string('kecamatan');
+            $table->date('waktu');
             $table->string('status');
             $table->timestamps();
         });
@@ -31,6 +32,6 @@ class Pelaporan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelaporan');
+        Schema::dropIfExists('histories');
     }
 }

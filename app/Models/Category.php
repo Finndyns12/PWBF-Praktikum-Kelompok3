@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DetailKorban extends Model
+class Category extends Model
 {
-    use HasFactory;
     protected $guarded = ['id'];
-    public function pelaporan()
-    {
-    return $this->belongsTo(Pelaporan::class);
-    }
 
+    public function bencana()
+    {
+        return $this->hasMany(Bencana::class);
+    }
 }
