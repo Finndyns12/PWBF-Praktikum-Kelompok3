@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPelaporanController;
 use App\Http\Controllers\DashboardHistoryController;
 use App\Http\Controllers\DashboardDaftarBencanaController;
+use App\Http\Controllers\ProvinsiController;
 
 
 
@@ -58,6 +59,7 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
     Route::resource('/dashboard/lapor', DashboardPelaporanController::class);
     Route::resource('/dashboard/history', DashboardHistoryController::class);
     Route::resource('/dashboard/daftarbencana', DashboardDaftarBencanaController::class);
+    Route::resource('/dashboard/provinsi', ProvinsiController::class);
 
    
 

@@ -1,4 +1,4 @@
-@extends('layout.main')
+<!-- @extends('layout.main')
 @section('container')
 <table border="1">
     <thead>
@@ -16,4 +16,13 @@
      @endforeach
     </tbody>
 </table> 
-@endsection
+@endsection -->
+
+@extends('dashboard\layouts\main')
+
+@section('container')
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h3">Daftar Nama Provinsi</h1>
+</div>
+
+    @endsection

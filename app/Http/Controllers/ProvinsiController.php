@@ -14,9 +14,9 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-             $p = provinsi::all();
-             return view('provinsi',['p'=>$p],["title" => "Provinsi"]);
-             
+            //  $p = provinsi::all();
+            //  return view('provinsi',['p'=>$p],["title" => "Provinsi"]);
+            return view('dashboard.provinsi.provinsi');     
     }
 
     /**
