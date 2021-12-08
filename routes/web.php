@@ -59,11 +59,10 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
     Route::resource('/dashboard/lapor', DashboardPelaporanController::class);
     Route::resource('/dashboard/history', DashboardHistoryController::class);
     Route::resource('/dashboard/daftarbencana', DashboardDaftarBencanaController::class);
-    Route::resource('/dashboard/provinsi', ProvinsiController::class);
+    
+    
 
-   
 
-Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');
 Route::get ('/kategori','App\Http\Controllers\KatBencanaCont@index');
 Route::get ('/role','App\Http\Controllers\RoleController@index');
 Route::get ('/kota','App\Http\Controllers\KotaController@index');
@@ -71,3 +70,6 @@ Route::get ('/kec','App\Http\Controllers\KecamatanController@index');
 Route::get ('/bencana','App\Http\Controllers\BencanaController@index');
 Route::get ('/user','App\Http\Controllers\UserController@index');
 
+//provinsi
+Route::resource('/dashboard/provinsi', ProvinsiController::class);
+Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');

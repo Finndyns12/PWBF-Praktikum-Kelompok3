@@ -9,6 +9,7 @@ class Provinsi extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $fillable = ['id_prov','name'];
 
     public function kota()
     {
