@@ -18,11 +18,25 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'tgl_lahir',
-        'id_kecamatan'
+        // 'name',
+        // 'email',
+        // 'password',
+        // 'tgl_lahir',
+        // 'id_kecamatan'
+
+        protected $guarded = ['id'];
+        protected $fillable= ['name','email'];
+
+        public function UserRole()
+        {
+            return $this->belongsTo(UserRole::class);
+        }
+        public function pelaporan()
+        {
+        return $this->hasMany(Pelaporan::class);
+        }
+
+        
     ];
 
     /**

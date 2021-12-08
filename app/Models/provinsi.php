@@ -9,4 +9,11 @@ class provinsi extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    protected $fillable = ['id_prov','name'];
+
+    public function kota()
+    {
+        return $this->hasMany(Kota::class);
+    }use HasFactory;
 }
