@@ -7,7 +7,7 @@
         <th>Nama</th>
         <th>Email</th>
         <th>Tgl_lahir</th>
-        <th>Password</th>
+       
     </tr>
     </thead>
     <tbody>
@@ -17,7 +17,6 @@
         <td>{{ $item->Nama }}</td>
         <td>{{ $item->Email}}</td>
         <td>{{ $item->Tgl_lahir }}</td>
-        <td>{{ $item->Password }}</td>
     </tr>
      @endforeach
     </tbody>

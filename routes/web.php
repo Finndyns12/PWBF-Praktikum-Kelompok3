@@ -10,8 +10,8 @@ use App\Http\Controllers\DashboardPelaporanController;
 use App\Http\Controllers\DashboardHistoryController;
 use App\Http\Controllers\DashboardDaftarBencanaController;
 use App\Http\Controllers\ProvinsiController;
-
-
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home',[
@@ -64,12 +64,21 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
 
 
 Route::get ('/kategori','App\Http\Controllers\KatBencanaCont@index');
-Route::get ('/role','App\Http\Controllers\RoleController@index');
+
 Route::get ('/kota','App\Http\Controllers\KotaController@index');
 Route::get ('/kec','App\Http\Controllers\KecamatanController@index');
 Route::get ('/bencana','App\Http\Controllers\BencanaController@index');
-Route::get ('/user','App\Http\Controllers\UserController@index');
+
 
 //provinsi
 Route::resource('/dashboard/provinsi', ProvinsiController::class);
 Route::get ('/Provinsi','App\Http\Controllers\ProvinsiController@index');
+
+//role
+Route::resource('/dashboard/role', RoleController::class);
+Route::get ('/role','App\Http\Controllers\RoleController@index');
+
+
+//user
+Route::resource('/dashboard/user', UserController::class);
+Route::get ('/user','App\Http\Controllers\UserController@index');
