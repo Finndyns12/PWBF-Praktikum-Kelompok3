@@ -20,8 +20,14 @@ class User extends Authenticatable
       //  'id_kecamatan'
     //];
 
+<<<<<<< HEAD
         protected $guarded = ['id'];
         protected $fillable= ['name','email','tgl_lahir'];
+=======
+    protected $guarded = ['id'];
+    protected $fillable= ['name','email','tgl_lahir'];
+
+>>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
 
         public function UserRole()
         {

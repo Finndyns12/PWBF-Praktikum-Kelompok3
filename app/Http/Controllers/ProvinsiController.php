@@ -16,16 +16,26 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
             // $p = provinsi::all();
             // return view('dashboard.provinsi',['p'=>$p],["title" => "Provinsi"]);
 
+=======
+            //  $p = provinsi::all();
+            //  return view('provinsi',['p'=>$p],["title" => "Provinsi"]);
+            //return view('dashboard.provinsi.provinsi'); 
+            
+>>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
             $provinsis = Provinsi::all();
             return view('dashboard.provinsi.provinsi',[
                 'title' => 'Provinsi',
                 'provinsis'=> $provinsis
+<<<<<<< HEAD
                 
             ]);
              
+=======
+>>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
     }
 
     /**

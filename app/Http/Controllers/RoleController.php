@@ -18,13 +18,19 @@ class RoleController extends Controller
     {
         // $p = role::all();
         // return view('role',['p'=>$p],["title" => "role"]);
+<<<<<<< HEAD
         
+=======
+>>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
         $role = Role::all();
         return view('dashboard.role.role',[
             'title' => 'Role',
             'role'=> $role
         ]);
+<<<<<<< HEAD
             
+=======
+>>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
     }
 
     public function tambah()
