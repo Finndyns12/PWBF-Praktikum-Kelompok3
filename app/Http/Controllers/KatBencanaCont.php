@@ -14,7 +14,8 @@ class KatBencanaCont extends Controller
      */
     public function index()
     {
-       
+        $p = kategori_bencana::all();
+        return view('kategoribencana',['p'=>$p],["title" => "kategoribencana"]);
     }
 
     /**

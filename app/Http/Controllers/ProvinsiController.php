@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\provinsi;
+use Illuminate\Support\Facades\DB;
+use App\Models\Provinsi;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class ProvinsiController extends Controller
 {
@@ -14,8 +16,15 @@ class ProvinsiController extends Controller
      */
     public function index()
     {
-             $p = provinsi::all();
-             return view('provinsi',['p'=>$p],["title" => "Provinsi"]);
+            // $p = provinsi::all();
+            // return view('dashboard.provinsi',['p'=>$p],["title" => "Provinsi"]);
+
+            $provinsis = Provinsi::all();
+            return view('dashboard.provinsi.provinsi',[
+                'title' => 'Provinsi',
+                'provinsis'=> $provinsis
+                
+            ]);
              
     }
 
@@ -26,7 +35,9 @@ class ProvinsiController extends Controller
      */
     public function create()
     {
-        //
+        //$provinsis = DB::table('provinsis')->get();
+       // return $provinsis;
+        //return view('dashboard.provinsi.provinsi',['provinsis'=>$provinsis]);
     }
 
     /**

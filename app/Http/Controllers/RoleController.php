@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\role;
+use Illuminate\Support\Facades\DB;
+use App\Models\Role;
 use Illuminate\Http\Request;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class RoleController extends Controller
 {
@@ -14,18 +16,23 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $p = role::all();
-        return view('role',['p'=>$p],["title" => "role"]);
+        // $p = role::all();
+        // return view('role',['p'=>$p],["title" => "role"]);
+        
+        $role = Role::all();
+        return view('dashboard.role.role',[
+            'title' => 'Role',
+            'role'=> $role
+        ]);
+            
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function tambah()
     {
-        //
+     
+        // memanggil view tambah
+        return view('dashboard.role.tambahrole');
+     
     }
 
     /**
@@ -36,7 +43,12 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-   
+        DB::table('Role')->insert([
+            'id_role'=>$request->id_role,
+            'name'=>$request->role
+        ]);
+        return redirect('/role');
+
     }
 
     /**

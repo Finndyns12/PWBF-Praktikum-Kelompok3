@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Http\Request;
 class UserController extends Controller
 {
@@ -13,9 +13,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        $p = user::all();
-        return view('user',['p'=>$p],["title" => "user"]);
-    
+        // $p = user::all();
+        // return view('user',['p'=>$p],["title" => "user"]);
+        $user = User::all();
+        return view('dashboard.user.user',[
+            'title' => 'user',
+            'user'=> $user
+            
+        ]);
+         
+       // return view('dashboard.user.user');
     }
 
     /**

@@ -1,11 +1,11 @@
- <?php
+<?php
 
 namespace App\Http\Controllers;
 
-use App\Models\History;
+use App\Models\Lapor;
 use Illuminate\Http\Request;
 
-class DashboardHistoryController extends Controller
+class DashboardLaporController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,10 @@ class DashboardHistoryController extends Controller
      */
     public function index()
     {
-        return view('dashboard.history.history');
+        return Lapor::where('user_id', auth()->user()->id)->get();
+        return view('dashboard.posts.index',[
+            'lapor' => Lapor::all()
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class DashboardHistoryController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -41,10 +44,10 @@ class DashboardHistoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\History  $history
+     * @param  \App\Models\Lapor  $lapor
      * @return \Illuminate\Http\Response
      */
-    public function show(History $history)
+    public function show(Lapor $lapor)
     {
         //
     }
@@ -52,10 +55,10 @@ class DashboardHistoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\History  $history
+     * @param  \App\Models\Lapor  $lapor
      * @return \Illuminate\Http\Response
      */
-    public function edit(History $history)
+    public function edit(Lapor $lapor)
     {
         //
     }
@@ -64,10 +67,10 @@ class DashboardHistoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\History  $history
+     * @param  \App\Models\Lapor  $lapor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, History $history)
+    public function update(Request $request, Lapor $lapor)
     {
         //
     }
@@ -75,10 +78,10 @@ class DashboardHistoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\History  $history
+     * @param  \App\Models\Lapor  $lapor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(History $history)
+    public function destroy(Lapor $lapor)
     {
         //
     }

@@ -21,6 +21,7 @@ class User extends Authenticatable
     //];
 
         protected $guarded = ['id'];
+        protected $fillable= ['name','email','tgl_lahir'];
 
         public function UserRole()
         {

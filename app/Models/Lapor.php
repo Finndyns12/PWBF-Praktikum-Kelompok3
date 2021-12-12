@@ -5,14 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Lapor extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    protected $fillable= ['name'];
-
-    public function UserRole()
-    {
-        return $this->hasMany(UserRole::class);
-    }
 }

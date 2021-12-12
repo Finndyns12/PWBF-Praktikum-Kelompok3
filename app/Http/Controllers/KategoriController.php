@@ -1,11 +1,11 @@
- <?php
+<?php
 
 namespace App\Http\Controllers;
 
-use App\Models\History;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
-class DashboardHistoryController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,12 @@ class DashboardHistoryController extends Controller
      */
     public function index()
     {
-        return view('dashboard.history.history');
+        $kategori = Category::all();
+        return view('dashboard.kategori.kategori',[
+            'title' => 'Kategorie',
+            'kategori'=> $kategori
+        ]);
+       
     }
 
     /**
@@ -24,7 +29,7 @@ class DashboardHistoryController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -41,10 +46,10 @@ class DashboardHistoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\History  $history
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(History $history)
+    public function show($id)
     {
         //
     }
@@ -52,10 +57,10 @@ class DashboardHistoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\History  $history
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(History $history)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +69,10 @@ class DashboardHistoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\History  $history
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, History $history)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +80,10 @@ class DashboardHistoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\History  $history
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(History $history)
+    public function destroy($id)
     {
         //
     }

@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 @section('container')
 <table border="1">
     <thead>
