@@ -25,11 +25,11 @@
           <li class="nav-item">
             <a class="nav-link {{ Request::is('dashboard/daftarbencana') ? 'active' : '' }}" href="/dashboard/daftarbencana">
               <span data-feather="list"></span>
-              Daftar Bencana
+              Daftar Bencanaa
             </a>
           </li>
           <li>
-          <a class="nav-link {{ Request::is('provinsi') ? 'active' : '' }}" href="provinsi">
+          <a class="nav-link {{ Request::is('dashboard/provinsi') ? 'active' : '' }}" href="/dashboard/provinsi">
             <span data-feather="list"></span>
             Daftar Nama Provinsi
           </a>

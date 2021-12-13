@@ -10,15 +10,10 @@ use App\Http\Controllers\DashboardPelaporanController;
 use App\Http\Controllers\DashboardHistoryController;
 use App\Http\Controllers\DashboardDaftarBencanaController;
 use App\Http\Controllers\ProvinsiController;
-<<<<<<< HEAD
 use App\Http\Controllers\KotaController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\KategoriController;
-=======
-use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
->>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
 
 Route::get('/', function () {
     return view('home',[
@@ -72,42 +67,6 @@ Route::get('/news/{news}' , [NewsController::class, 'show'] );
     Route::resource('/dashboard/history', DashboardHistoryController::class);
     Route::resource('/dashboard/daftarbencana', DashboardDaftarBencanaController::class);
     
-<<<<<<< HEAD
-    Route::resource('/dashboard/kota', KotaController::class);
-
-
-
-Route::get ('/kota','App\Http\Controllers\KotaController@index');
-Route::get ('/kec','App\Http\Controllers\KecamatanController@index');
-Route::get ('/bencana','App\Http\Controllers\BencanaController@index');
-
-
-////provinsi
-Route::resource('/dashboard/provinsi', ProvinsiController::class);
-Route::get ('/provinsi','App\Http\Controllers\ProvinsiController@index');
-Route::get ('/provinsi','App\Http\Controllers\ProvinsiController@create');
-
-//user
-Route::resource('/dashboard/user', UserController::class);
-Route::get ('/user','App\Http\Controllers\UserController@index');
-
-//role
-Route::resource('/dashboard/role', RoleController::class);
-Route::get ('/role','App\Http\Controllers\RoleController@index');
-Route::get ('role/tambah','App\Http\Controllers\RoleController@tambah');
-Route::post('role/store','App\Http\Controllers\RoleController@store');//untuk nambah
-
-// Route::get('role',[RoleController::class,'role']);
-// Route::get('role/tambahrole',[RoleController::class,'tambah']);
-// Route::post('role/store',[RoleController::class,'store']);
-// Route::get('roleedit/{id}',[RoleController::class,'edit']);
-// Route::post('role/update',[RoleController::class,'update']);
-// Route::get('role/delete/{id}',[RoleController::class,'delete']);
-
-//katbencana
-Route::resource('/dashboard/kategori', KategoriController::class);
-Route::get ('/kategori','App\Http\Controllers\KategoriController@index');
-=======
     
 
 
@@ -130,4 +89,3 @@ Route::get ('/role','App\Http\Controllers\RoleController@index');
 //user
 Route::resource('/dashboard/user', UserController::class);
 Route::get ('/user','App\Http\Controllers\UserController@index');
->>>>>>> a20750d53f7f0cd4e236a6dfbd243cfef90aa501
